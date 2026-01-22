@@ -1,0 +1,48 @@
+@startuml AIM Sample
+
+hide empty members
+
+skinparam class {
+  BackgroundColor<<Component>> #FFD6A5
+  BackgroundColor<<Action>> #ffb3b3
+  BorderColor Black
+}
+
+skinparam package {
+  BackgroundColor<<Page>> #E8F2FF
+  BackgroundColor<<Modal>> #CCCCCC
+  BackgroundColor<<Component>> #FFD6A5
+  BackgroundColor<<Overlay>> #FFECB3
+  BorderColor Black
+}
+
+
+package "Settings Page" <<Page>> {
+  class "Header" <<Component>>
+  class "Change user ID" <<Button>>
+  class "Billing plan" <<Button>>
+  class "Header Color" <<PullDown>>
+
+  class "Change the Header color" <<Action>>
+}
+
+package "Change User ID Modal" <<Modal>> {
+  class "Update user ID" <<Action>>
+}
+
+package "Change billing plan Modal" <<Modal>> {
+  class "Change billing plan" <<Action>>
+}
+
+package "Header" <<Component>> {
+  class "Site Logo" <<Img>>
+  class "User ID" <<Text>>
+  class "Gear Icon" <<Button>>
+}
+
+
+"Update user ID" --> "User ID"
+"Change the Header color" --> "Header"
+"Change billing plan" --> "Gear Icon" : if free plan,\ninvisible Paid Member Menu
+
+@enduml
