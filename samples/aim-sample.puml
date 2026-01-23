@@ -43,6 +43,6 @@ package "Header" <<Component>> {
 
 "Update user ID" --> "User ID"
 "Change the Header color" --> "Header"
-"Change billing plan" --> "Gear Icon" : if free plan,\ninvisible Paid Member Menu
+"Change billing plan" --> "Gear Icon" : if free plan,\ndelete Paid Member Menu
 
 @enduml
