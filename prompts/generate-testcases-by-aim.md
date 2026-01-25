@@ -68,7 +68,7 @@ package "Header" <<Component>> {
 @enduml
 ```
 
-## Output: Test Cases (CSV)
+## Output: Test Cases
 ```markdown
 ## Test Case
 
