@@ -1,0 +1,55 @@
+@startuml UCOD Sample associated with AIM
+
+
+skinparam class {
+  BackgroundColor<<Page>> #E8F2FF
+  BackgroundColor<<Modal>> #CCCCCC
+  BackgroundColor<<Component>> #FFD6A5
+  BackgroundColor<<Overlay>> #FFECB3
+  BorderColor Black
+}
+
+
+class "Settings Page" <<Page>> {
+  <<Component>> Header
+  <<Button>> Change user ID
+  <<Button>> Billing plan
+  <<PullDown>> Header Color
+  ---
+  Change the Header color
+}
+
+class "Change User ID Modal" <<Modal>> {
+  <<TextBox>> New user ID
+  <<Button>> Save Changes
+  ---
+  Update user ID
+}
+
+class "Change billing plan Modal" <<Modal>> {
+  <<PullDown>> Select Plan
+  <<Button>> Save Change
+  ---
+  Change billing plan
+}
+
+package "Header" as HeaderPackage {
+  class "Header" as HeaderClass <<Component>> {
+    <<Img>> Site Logo
+    <<Text>> User ID
+    <<Button>> Gear Icon
+    ---
+  }
+
+  class "Gear Icon Menu" <<Overlay>> {
+    <<Button>> Paid Member Menu
+    ---
+  }
+}
+
+
+"Settings Page" --> "Change User ID Modal"
+"Settings Page" --> "Change billing plan Modal"
+"HeaderClass" --> "Gear Icon Menu"
+
+@enduml
