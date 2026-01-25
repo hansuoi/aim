@@ -25,12 +25,12 @@
 - 影響範囲の整理:
     - あるユーザーのアクションがどのUI要素に影響を与えるかを整理できる
     - 特定アクションが影響を与えるUI要素が多すぎないか・特定UI要素が影響を受けるアクションが多すぎないかなど、システムの改善点を識別することにも役立つ
+    - [プロンプト例](./prompts/analyze-impact.md)
 - 生成AIによるテストケースの設計:
     - 生成AIにAIMを読み込ませ、AIMに記載されている影響範囲を網羅させることで、テストスイートを設計できる
     - [プロンプト例](./prompts/generate-testcases-by-aim.md)
 - 生成AIによる自動テストの自動実装:
-    - 生成AIに、AIM・プロダクトコードの差分・AIMの姉妹モデルである[UCOD](https://github.com/hansuoi/ucod)とを読み込ませることで、プロダクトのインクリメント部分をテスト対象とした、POM(Page Object Model)による自動テストを自動生成できる
-    - [プロンプト例](./prompts/generate-pom-for-increment.md)
+    - 生成AIに、AIM・インクリメント情報(プロダクトコードの差分・タスクチケット・etc.)・AIMの姉妹モデルである[UCOD](https://github.com/hansuoi/ucod)とを読み込ませることで、プロダクトのインクリメント部分をテスト対象とした、POM(Page Object Model)による自動テストを自動生成できる
 
 ---
 
@@ -42,7 +42,7 @@
 │  ├─ aim-design-guide.en.md
 │  └─ aim-design-guide.ja.md
 ├─ prompts/
-│  ├─ generate-impact-tests.md
+│  ├─ generate-testcases-by-aim.md
 │  └─ analyze-impact.md
 └─ samples/
    ├─ aim-sample.puml
