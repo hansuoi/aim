@@ -1,6 +1,6 @@
 # AIM
 
-## Overview
+## ABOUT
 - AIM (Action Impact Model) is a modeling notation based on class diagrams, designed to visualize the impact scope of user actions and define test "targets".
 - It is designed for documentation, impact analysis, and AI-assisted test design and implementation.
 
